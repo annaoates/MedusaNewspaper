@@ -12,7 +12,8 @@ datePattern = re.compile(r"""^(.*?)
 	(.*?)
 	([.]tif$)
         """, re.VERBOSE)
-# edPart (0\d) # this will change if the edition is in a different place or if the edition is not included in the filename
+
+# Note: may include "edPart (0\d)". This will change if the edition is in a different place or if the edition is not included in the filename
 
 # loop over files in working directory
 
@@ -35,5 +36,5 @@ for issueFileName in os.listdir('.'):
 	issueFileName = os.path.join(absWorkingDir, issueFileName)
 	issueFolderName = os.path.join(absWorkingDir, issueFolderName)
 
-	print("Moving '%s' to '%s'..." % (issueFileName, issueFolderName))
+	print "Moving '%s' to '%s'..." % (issueFileName, issueFolderName)
 	shutil.move(issueFileName, issueFolderName)
