@@ -4,23 +4,33 @@ This document contains regular expressions to remove uneccessary folder names.
 
 ## remove date
 
+```
 \d\d[/]\d\d[/]\d\d\d\d
+```
 
 ## remove time
+```
 \d\d[:]\d\d (PM)
+```
 
 
 ## remove file size -- may need to remove leading zeros (double check)
 
+```
 ((\d+)[,])*(\d+)[,](\d+)
+```
 
 ## remove title information 
 
+```
 \d\d\d[-]\w\w\w[-]
+```
 
 ## remove sequence and trailing info and replace with edition number
 
+```
 (\d+)[-]((single)|(double))[.](tif)
+```
 
 ## remove duplicates
 
